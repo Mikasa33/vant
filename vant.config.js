@@ -15,8 +15,8 @@ module.exports = {
   site: {
     defaultLang: 'en-US',
     versions: [
-      { label: 'Vant 1.x', link: '/vant/1.x/' },
-      { label: 'Vant 2.x', link: '/vant/' },
+      { label: 'Vant v1', link: '/vant/v1/' },
+      { label: 'Vant v2', link: '/vant/' },
       { label: 'Vant Weapp', link: '/vant-weapp/' },
     ],
     baiduAnalytics: {
@@ -24,7 +24,7 @@ module.exports = {
     },
     htmlPluginOptions: {
       meta: {
-        'docsearch:version': '3.x',
+        'docsearch:version': 'v3',
       },
     },
     locales: {
@@ -39,26 +39,25 @@ module.exports = {
             url: 'https://github.com/youzan/vant',
           },
         ],
-        // TODO
-        // searchConfig: {
-        //   apiKey: '90067aecdaa2c85220e2783cd305caac',
-        //   indexName: 'vant',
-        //   searchParameters: {
-        //     facetFilters: ['lang:zh-CN', 'version:3.x'],
-        //   },
-        //   transformItems(items) {
-        //     if (location.hostname !== 'youzan.github.io') {
-        //       items.forEach((item) => {
-        //         if (item.url) {
-        //           item.url =
-        //             item.url &&
-        //             item.url.replace('youzan.github.io', location.hostname);
-        //         }
-        //       });
-        //     }
-        //     return items;
-        //   },
-        // },
+        searchConfig: {
+          apiKey: '90067aecdaa2c85220e2783cd305caac',
+          indexName: 'vant',
+          searchParameters: {
+            facetFilters: ['lang:zh-CN', 'version:v3'],
+          },
+          transformItems(items) {
+            if (location.hostname !== 'youzan.github.io') {
+              items.forEach((item) => {
+                if (item.url) {
+                  item.url =
+                    item.url &&
+                    item.url.replace('youzan.github.io', location.hostname);
+                }
+              });
+            }
+            return items;
+          },
+        },
         nav: [
           {
             title: '开发指南',
@@ -420,14 +419,13 @@ module.exports = {
             url: 'https://github.com/youzan/vant',
           },
         ],
-        // TODO
-        // searchConfig: {
-        //   apiKey: '90067aecdaa2c85220e2783cd305caac',
-        //   indexName: 'vant',
-        //   searchParameters: {
-        //     facetFilters: ['lang:en-US', 'version:3.x'],
-        //   },
-        // },
+        searchConfig: {
+          apiKey: '90067aecdaa2c85220e2783cd305caac',
+          indexName: 'vant',
+          searchParameters: {
+            facetFilters: ['lang:en-US', 'version:v3'],
+          },
+        },
         nav: [
           {
             title: 'Essentials',

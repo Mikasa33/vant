@@ -1,4 +1,11 @@
-import { h, ref, watch, computed, nextTick, reactive } from 'vue';
+import {
+  ref,
+  watch,
+  computed,
+  nextTick,
+  reactive,
+  createCommentVNode,
+} from 'vue';
 
 // Utils
 import { createNamespace, isObject } from '../utils';
@@ -282,11 +289,12 @@ export default createComponent({
         );
       }
 
-      return h();
+      return createCommentVNode();
     };
 
     useExpose({
       getArea,
+      setAreaCode,
       setAddressDetail,
     });
 

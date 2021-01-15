@@ -281,6 +281,63 @@ export default {
 };
 ```
 
+### 自定义 Columns 的结构
+
+```html
+<van-picker
+  :title="标题"
+  :columns="columns"
+  :columns-field-names="customFieldName"
+/>
+```
+
+```js
+import { reactive } from 'vue';
+
+export default {
+  setup() {
+    const columns = [
+      {
+        cityName: '浙江',
+        cities: [
+          {
+            cityName: '杭州',
+            cities: [{ cityName: '西湖区' }, { cityName: '余杭区' }],
+          },
+          {
+            cityName: '温州',
+            cities: [{ cityName: '鹿城区' }, { cityName: '瓯海区' }],
+          },
+        ],
+      },
+      {
+        cityName: '福建',
+        cities: [
+          {
+            cityName: '福州',
+            cities: [{ cityName: '鼓楼区' }, { cityName: '台江区' }],
+          },
+          {
+            cityName: '厦门',
+            cities: [{ cityName: '思明区' }, { cityName: '海沧区' }],
+          },
+        ],
+      },
+    ];
+
+    const customFieldName = {
+      text: 'cityName',
+      children: 'cities',
+    };
+
+    return {
+      columns,
+      customFieldName,
+    };
+  },
+};
+```
+
 ## API
 
 ### Props
@@ -288,6 +345,7 @@ export default {
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | columns | 对象数组，配置每一列显示的数据 | _Column[]_ | `[]` |
+| columns-field-names | 自定义`columns`结构中的字段 | _object_ | `{ text: 'text', values: 'values', children: 'children' }` |
 | title | 顶部栏标题 | _string_ | - |
 | confirm-button-text | 确认按钮文字 | _string_ | `确认` |
 | cancel-button-text | 取消按钮文字 | _string_ | `取消` |
@@ -297,7 +355,7 @@ export default {
 | show-toolbar | 是否显示顶部栏 | _boolean_ | `true` |
 | allow-html | 是否允许选项内容中渲染 HTML | _boolean_ | `false` |
 | default-index | 单列选择时，默认选中项的索引 | _number \| string_ | `0` |
-| item-height `v2.8.6` | 选项高度，支持 `px` `vw` `vh` `rem` 单位，默认 `px` | _number \| string_ | `44` |
+| item-height | 选项高度，支持 `px` `vw` `vh` `rem` 单位，默认 `px` | _number \| string_ | `44` |
 | visible-item-count | 可见的选项个数 | _number \| string_ | `6` |
 | swipe-duration | 快速滑动时惯性滚动的时长，单位 `ms` | _number \| string_ | `1000` |
 
@@ -313,26 +371,26 @@ export default {
 
 ### Slots
 
-| 名称               | 说明                   | 参数                       |
-| ------------------ | ---------------------- | -------------------------- |
-| default            | 自定义整个顶部栏的内容 | -                          |
-| title              | 自定义标题内容         | -                          |
-| confirm `v2.10.11` | 自定义确认按钮内容     | -                          |
-| cancel `v2.10.11`  | 自定义取消按钮内容     | -                          |
-| option `v2.10.11`  | 自定义选项内容         | _option: string \| object_ |
-| columns-top        | 自定义选项上方内容     | -                          |
-| columns-bottom     | 自定义选项下方内容     | -                          |
+| 名称           | 说明                   | 参数                       |
+| -------------- | ---------------------- | -------------------------- |
+| default        | 自定义整个顶部栏的内容 | -                          |
+| title          | 自定义标题内容         | -                          |
+| confirm        | 自定义确认按钮内容     | -                          |
+| cancel         | 自定义取消按钮内容     | -                          |
+| option         | 自定义选项内容         | _option: string \| object_ |
+| columns-top    | 自定义选项上方内容     | -                          |
+| columns-bottom | 自定义选项下方内容     | -                          |
 
 ### Column 数据结构
 
 当传入多列数据时，`columns` 为一个对象数组，数组中的每一个对象配置每一列，每一列有以下 `key`:
 
-| 键名              | 说明                       | 类型       |
-| ----------------- | -------------------------- | ---------- |
-| values            | 列中对应的备选值           | _string[]_ |
-| defaultIndex      | 初始选中项的索引，默认为 0 | _number_   |
-| className         | 为对应列添加额外的类名     | _any_      |
-| children `v2.4.5` | 级联选项                   | _Column_   |
+| 键名         | 说明                       | 类型       |
+| ------------ | -------------------------- | ---------- |
+| values       | 列中对应的备选值           | _string[]_ |
+| defaultIndex | 初始选中项的索引，默认为 0 | _number_   |
+| className    | 为对应列添加额外的类名     | _any_      |
+| children     | 级联选项                   | _Column_   |
 
 ### 方法
 
@@ -350,7 +408,7 @@ export default {
 | setColumnIndex | 设置对应列选中项的索引 | columnIndex, optionIndex | - |
 | getColumnValues | 获取对应列中所有选项 | columnIndex | values |
 | setColumnValues | 设置对应列中所有选项 | columnIndex, values | - |
-| confirm `v2.4.0` | 停止惯性滚动并触发 confirm 事件 | - | - |
+| confirm | 停止惯性滚动并触发 confirm 事件 | - | - |
 
 ### 样式变量
 

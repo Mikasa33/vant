@@ -2,7 +2,7 @@
 
 ### 提示
 
-当前文档为 Vant 3.x 版本的更新日志，如需查询 Vant 2.x 的更新内容，请访问 [Vant 2.x 更新日志](https://youzan.github.io/vant/#/zh-CN/changelog)。
+当前文档为 Vant 3 的更新日志，如需查询 Vant 2 的更新内容，请访问 [Vant 2 更新日志](https://youzan.github.io/vant/#/zh-CN/changelog)。
 
 ### 介绍
 
@@ -15,6 +15,40 @@ Vant 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范。
 - 主版本号：发布时间不定，包含不兼容更新。
 
 ## 更新内容
+
+### [v3.0.3](https://github.com/youzan/vant/compare/v3.0.2...v3.0.3)
+
+`2021-01-10`
+
+**Feature**
+
+- Field: 新增 autocomplate 属性 [#7877](https://github.com/youzan/vant/issues/7877)
+
+**Bug Fixes**
+
+- Area: 修复无法调用 getValues 方法的问题 [03c7b4](https://github.com/youzan/vant/commit/03c7b46b04d8c543f952cbf8399ec21ca39f979f)
+- ImagePreview: 修复 close-on-popstate 属性不生效的问题 [#7880](https://github.com/youzan/vant/issues/7880)
+- List: 修复更新 error 属性后未触发位置检查的问题 [b79c32](https://github.com/youzan/vant/commit/b79c32183f6159a663dad42f6189a939061f9f32)
+
+### [v3.0.2](https://github.com/youzan/vant/compare/v3.0.1...v3.0.2)
+
+`2021-01-02`
+
+**Feature**
+
+- Calendar: 新增 scrollToDate 方法 [#7847](https://github.com/youzan/vant/issues/7847)
+- Form: 新增 disabled 属性 [#7830](https://github.com/youzan/vant/issues/7830)
+- Form: 新增 readonly 属性 [#7830](https://github.com/youzan/vant/issues/7830)
+- Loading: 新增 text-color 属性 [#7806](https://github.com/youzan/vant/issues/7806)
+- Picker: 新增 columns-field-names 属性 [#7791](https://github.com/youzan/vant/issues/7791)
+- NumberKeyboard: 新增 random-key-order 属性 [#7841](https://github.com/youzan/vant/issues/7841)
+
+**Bug Fixes**
+
+- Calendar: 修复 title 插槽不生效的问题 [#7826](https://github.com/youzan/vant/issues/7826)
+- Calendar: 修复动态设置 defaultDate 不生效的问题 [#7815](https://github.com/youzan/vant/issues/7815)
+- Popup: 修复组件销毁时未解除滚动锁定的问题 [#7835](https://github.com/youzan/vant/issues/7835)
+- Stepper: 修复动态设置 modelValue 时未格式化的问题 [81494d](https://github.com/youzan/vant/commit/81494dfa13e6ab9a3f12995f481290d27d14ab7a)
 
 ### [v3.0.1](https://github.com/youzan/vant/compare/v3.0.0...v3.0.1)
 
@@ -447,4 +481,4 @@ Vant 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范。
 
 - Lazyload、Panel 和 Sku 组件暂未完成 Vue 3 适配
 
-> 详细改动请参考 [从 v2 升级](https://youzan.github.io/vant/next/#/zh-CN/migrate-from-v2)。
+> 详细改动请参考 [从 v2 升级](https://youzan.github.io/vant/v3/#/zh-CN/migrate-from-v2)。

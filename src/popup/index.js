@@ -7,8 +7,8 @@ import {
   onMounted,
   Transition,
   onActivated,
-  onBeforeMount,
   onDeactivated,
+  onBeforeUnmount,
 } from 'vue';
 import { createNamespace, isDef } from '../utils';
 
@@ -168,9 +168,9 @@ export default createComponent({
           <Overlay
             show={props.show}
             class={props.overlayClass}
-            style={props.overlayStyle}
             zIndex={zIndex.value}
             duration={props.duration}
+            customStyle={props.overlayStyle}
             onClick={onClickOverlay}
           />
         );
@@ -280,7 +280,7 @@ export default createComponent({
       }
     });
 
-    onBeforeMount(() => {
+    onBeforeUnmount(() => {
       if (opened) {
         unlockScroll();
       }

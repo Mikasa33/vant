@@ -16,13 +16,11 @@
 </p>
 
 <p align="center">
-  🔥 <a href="https://vant-contrib.gitee.io/vant">文档网站</a>
+  🔥 <a href="https://vant-contrib.gitee.io/vant">文档网站（国内）</a>
   &nbsp;
+  🌈 <a href="https://youzan.github.io/vant">文档网站（GitHub）</a>
   &nbsp;
   🇨🇳 <a href="./README.zh-CN.md">中文版介绍</a>
-  &nbsp;
-  &nbsp;
-  🚀 <a href="https://github.com/youzan/vant-weapp" target="_blank">小程序版</a>
 </p>
 
 ---
@@ -43,10 +41,10 @@
 ## Install
 
 ```bash
-# Install vant 2.x for Vue 2 project
+# Install Vant 2 for Vue 2 project
 npm i vant -S
 
-# Install vant 3.x for Vue 3 project
+# Install Vant 3 for Vue 3 project
 npm i vant@next -S
 ```
 

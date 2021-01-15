@@ -11,6 +11,7 @@ export default createComponent({
     title: String,
     zIndex: [Number, String],
     teleport: [String, Object],
+    randomKeyOrder: Boolean,
     closeButtonText: String,
     deleteButtonText: String,
     closeButtonLoading: Boolean,
@@ -66,6 +67,11 @@ export default createComponent({
       for (let i = 1; i <= 9; i++) {
         keys.push({ text: i });
       }
+
+      if (props.randomKeyOrder) {
+        keys.sort(() => (Math.random() > 0.5 ? 1 : -1));
+      }
+
       return keys;
     };
 
@@ -116,6 +122,7 @@ export default createComponent({
     };
 
     const onAnimationEnd = () => {
+      console.log('onAnimationEnd');
       emit(props.show ? 'show' : 'hide');
     };
 
@@ -165,18 +172,18 @@ export default createComponent({
 
     const renderKeys = () => {
       return keys.value.map((key) => {
-        const slots = {};
+        const keySlots = {};
 
         if (key.type === 'delete') {
-          slots.default = slots.delete;
+          keySlots.default = slots.delete;
         }
         if (key.type === 'extra') {
-          slots.default = slots['extra-key'];
+          keySlots.default = slots['extra-key'];
         }
 
         return (
           <Key
-            v-slots={slots}
+            v-slots={keySlots}
             key={key.text}
             text={key.text}
             type={key.type}

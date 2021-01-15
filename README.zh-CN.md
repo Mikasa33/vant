@@ -16,10 +16,9 @@
 </p>
 
 <p align="center">
-  🔥 <a href="https://vant-contrib.gitee.io/vant">文档网站</a>
+  🔥 <a href="https://vant-contrib.gitee.io/vant">文档网站（国内）</a>
   &nbsp;
-  &nbsp;
-  🚀 <a href="https://github.com/youzan/vant-weapp" target="_blank">小程序版</a>
+  🌈 <a href="https://youzan.github.io/vant">文档网站（GitHub）</a>
 </p>
 
 ---
@@ -28,7 +27,7 @@
 
 Vant 是**有赞前端团队**开源的移动端组件库，于 2017 年开源，已持续维护 4 年时间。Vant 对内承载了有赞所有核心业务，对外服务十多万开发者，是业界主流的移动端组件库之一。
 
-目前 Vant 官方提供了 [Vue 2 版本](https://vant-contrib.gitee.io/vant)、[Vue 3 版本](https://vant-contrib.gitee.io/vant/next)和[微信小程序版本](http://vant-contrib.gitee.io/vant-weapp)，并由社区团队维护 [React 版本](https://github.com/mxdi9i7/vant-react)和[支付宝小程序版本](https://github.com/ant-move/Vant-Aliapp)。
+目前 Vant 官方提供了 [Vue 2 版本](https://vant-contrib.gitee.io/vant)、[Vue 3 版本](https://vant-contrib.gitee.io/vant/v3)和[微信小程序版本](http://vant-contrib.gitee.io/vant-weapp)，并由社区团队维护 [React 版本](https://github.com/mxdi9i7/vant-react)和[支付宝小程序版本](https://github.com/ant-move/Vant-Aliapp)。
 
 ## 特性
 
@@ -46,10 +45,10 @@ Vant 是**有赞前端团队**开源的移动端组件库，于 2017 年开源�
 ## 安装
 
 ```bash
-# Vue 2 项目，安装 Vant 2.x 版本：
+# Vue 2 项目，安装 Vant 2：
 npm i vant -S
 
-# Vue 3 项目，安装 Vant 3.x 版本：
+# Vue 3 项目，安装 Vant 3：
 npm i vant@next -S
 ```
 

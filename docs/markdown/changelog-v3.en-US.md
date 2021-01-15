@@ -2,7 +2,7 @@
 
 ### Tips
 
-The current document is the changelog of Vant 3.x. If you want to view the changelog of Vant 2.x, please visit [Vant 2.x Changelog](https://youzan.github.io/vant/#/en-US/changelog).
+The current document is the changelog of Vant 3. If you want to view the changelog of Vant 2, please visit [Vant 2 Changelog](https://youzan.github.io/vant/#/en-US/changelog).
 
 ### Intro
 
@@ -15,6 +15,40 @@ Vant follows [Semantic Versioning 2.0.0](https://semver.org/lang/zh-CN/).
 - Major version：including breaking changes and new features.
 
 ## Details
+
+### [v3.0.3](https://github.com/youzan/vant/compare/v3.0.2...v3.0.3)
+
+`2021-01-10`
+
+**Feature**
+
+- Field: add autocomplate prop [#7877](https://github.com/youzan/vant/issues/7877)
+
+**Bug Fixes**
+
+- Area: should expose getValues method [03c7b4](https://github.com/youzan/vant/commit/03c7b46b04d8c543f952cbf8399ec21ca39f979f)
+- ImagePreview: close-on-popstate not work [#7880](https://github.com/youzan/vant/issues/7880)
+- List: should watch error prop and check position [b79c32](https://github.com/youzan/vant/commit/b79c32183f6159a663dad42f6189a939061f9f32)
+
+### [v3.0.2](https://github.com/youzan/vant/compare/v3.0.1...v3.0.2)
+
+`2021-01-02`
+
+**Feature**
+
+- Calendar: add scrollToDate method [#7847](https://github.com/youzan/vant/issues/7847)
+- Form: add disabled prop [#7830](https://github.com/youzan/vant/issues/7830)
+- Form: add readonly prop [#7830](https://github.com/youzan/vant/issues/7830)
+- Loading: add text-color prop [#7806](https://github.com/youzan/vant/issues/7806)
+- Picker: add columns-field-names prop [#7791](https://github.com/youzan/vant/issues/7791)
+- NumberKeyboard: add random-key-order prop [#7841](https://github.com/youzan/vant/issues/7841)
+
+**Bug Fixes**
+
+- Calendar: title slot not work [#7826](https://github.com/youzan/vant/issues/7826)
+- Calendar: failed to watch defaultDate [#7815](https://github.com/youzan/vant/issues/7815)
+- Popup: should remove lock scroll before destroyed [#7835](https://github.com/youzan/vant/issues/7835)
+- Stepper: should format model-value [81494d](https://github.com/youzan/vant/commit/81494dfa13e6ab9a3f12995f481290d27d14ab7a)
 
 ### [v3.0.1](https://github.com/youzan/vant/compare/v3.0.0...v3.0.1)
 
